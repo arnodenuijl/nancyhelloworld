@@ -14,6 +14,7 @@ namespace NancyTest
             using (var host = new NancyHost(config, uri))
             {
                 host.Start();
+                while (true)Console.ReadKey();
             }
         }
     }
