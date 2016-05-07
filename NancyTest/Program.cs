@@ -24,7 +24,11 @@ namespace NancyTest
     {
         public HomeModule() : base("/")
         {
-            Get["/"] = o => "Hello world!";
+            Get["/"]  = o =>
+            {
+                Console.WriteLine(Request.Url);
+                return "Hello world!";
+            };
         }
     }    
 }
