@@ -9,7 +9,7 @@ namespace NancyTest
         static void Main(string[] args)
         {
             var uri = new Uri("http://localhost:1234");
-            var config = new HostConfiguration {RewriteLocalhost = false};
+            var config = new HostConfiguration {RewriteLocalhost = true};
 
             using (var host = new NancyHost(config, uri))
             {
